@@ -1,0 +1,14 @@
+{
+  "name": "JSDesignPatterns",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "mocha --recursive ./tests"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^1.10.0",
+    "mocha": "^2.1.0"
+  }
+}
