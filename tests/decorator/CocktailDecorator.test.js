@@ -101,6 +101,7 @@ describe('CocktailDecorator', function() {
 
             var cocktail = new Cocktail(constants.MARTINI);
 
+            cocktail = CocktailDecorator.add(Ice, cocktail);
             cocktail = CocktailDecorator.add(Gin, cocktail);
             cocktail = CocktailDecorator.add(DryVermouth, cocktail);
             cocktail = CocktailDecorator.add(Shake, cocktail);
@@ -110,7 +111,7 @@ describe('CocktailDecorator', function() {
             console.log(cocktail.getName());
             console.log('--')
             console.log(cocktail.mix());
-            assert.equal(cocktail.mix(), 'Start with an empty glass\r\nPour 2oz of gin\r\nAdd a splash of dry vermouth\r\nShake it all up\r\nStrain into a clean glass\r\nGarnish with a green olive');
+            assert.equal(cocktail.mix(), 'Start with an empty glass\r\nAdd one cube of ice\r\nPour 2oz of gin\r\nAdd a splash of dry vermouth\r\nShake it all up\r\nStrain into a clean glass\r\nGarnish with a green olive');
         });
 
         it('Mixes a manhattan (builder)', function() {
@@ -120,14 +121,16 @@ describe('CocktailDecorator', function() {
             cocktail = CocktailDecorator.add(Ice, cocktail);
             cocktail = CocktailDecorator.add(Bourbon, cocktail);
             cocktail = CocktailDecorator.add(SweetVermouth, cocktail);
-            cocktail = CocktailDecorator.add(Stir, cocktail);
+            cocktail = CocktailDecorator.add(Bitters, cocktail);
+            cocktail = CocktailDecorator.add(Shake, cocktail);
+            cocktail = CocktailDecorator.add(Strain, cocktail);
             cocktail = CocktailDecorator.add(CherryGarnish, cocktail);
             cocktail = CocktailDecorator.add(OrangeTwist, cocktail);
 
             console.log(cocktail.getName());
             console.log('--')
             console.log(cocktail.mix());
-            assert.equal(cocktail.mix(), 'Start with an empty glass\r\nAdd one cube of ice\r\nPour 2oz of bourbon\r\nAdd a splash of sweet vermouth\r\nStir with a clean spoon\r\nGarnish with a maraschino cherry\r\nTop with a twist of orange');
+            assert.equal(cocktail.mix(), 'Start with an empty glass\r\nAdd one cube of ice\r\nPour 2oz of bourbon\r\nAdd a splash of sweet vermouth\r\nAdd a splash of bitters\r\nShake it all up\r\nStrain into a clean glass\r\nGarnish with a maraschino cherry\r\nTop with a twist of orange');
         });
     })
 });
