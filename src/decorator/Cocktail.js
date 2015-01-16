@@ -1,11 +1,13 @@
-var Cocktail = function(name) {
+var Cocktail = module.exports = function(name) {
     this.name = name;
 }
 
-module.exports = Cocktail;
-
 Cocktail.prototype = Object.create(Object.prototype);
 
+Cocktail.prototype.getName = function() {
+    return this.name;
+}
+
 Cocktail.prototype.mix = function() {
-    return '...and enjoy!';
+    return 'Start with an empty glass';
 }

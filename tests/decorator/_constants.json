@@ -1,15 +1,6 @@
 {
-    "MARTINI":        "martini",
-    "OLD_FASHIONED":  "old fashioned",
-    "MANHATTAN":      "manhattan",
-    "RYE":            "rye",
-    "BOURBON":        "bourbon",
-    "BITTERS":        "bitters",
-    "SWEET_VERMOUTH": "sweet vermouth",
-    "DRY_VERMOUTH":   "dry vermouth",
-    "ICE":            "ice",
-    "SUGAR":          "sugar",
-    "SHAKE":          "shake",
-    "STIR":           "stir",
-    "SIGNATURE":      "...and enjoy!"
+    "MARTINI":        "The Martini...",
+    "OLD_FASHIONED":  "The Old Fashioned...",
+    "MANHATTAN":      "The Manhattan...",
+    "SIGNATURE":      "Start with an empty glass"
 }
