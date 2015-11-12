@@ -1,0 +1,24 @@
+# ----- CONFIGURATION -----
+# container declaration is defined in Shippable web portal as of Shippable 2.0
+language: node_js
+node_js: 5.0
+
+# environment variables
+env:
+  global:
+    - NODE_ENV=test
+
+# only initiate builds from push or PR into master branch
+branches:
+  only:
+    - master
+
+# ----- INSTALL/BUILD/DEPLOY STAGES -----
+
+# install the root Node.js packages as defined in package.json
+install:
+  - npm install
+
+# execute tests
+script:
+  - npm test
